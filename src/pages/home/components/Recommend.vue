@@ -2,7 +2,7 @@
 <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of List" :key="item.id">
             <img class="item-img" :src="item.imgUrl">
             <div class="item-info">
             <p class="item-title">{{item.title}}</p>
@@ -17,29 +17,8 @@
 <script>
 export default {
     name: "HomeRecommend",
-    data () {
-       return {
-            recommendList: [
-            {
-            id:'0001',
-            imgUrl:'https://imgs.qunarzz.com/sight/p0/1505/bf/bf0ddc1cc474e026.water.jpg_250x250_d208ab43.jpg',
-            title:'大连铭湖滑雪场',
-            desc:'很好，一家人都去了，玩的很开心'
-        },
-            {
-            id:'0002',
-            imgUrl:'https://imgs.qunarzz.com/sight/p0/1505/bf/bf0ddc1cc474e026.water.jpg_250x250_d208ab43.jpg',
-            title:'大连铭湖滑雪场',
-            desc:'很好，一家人都去了，玩的很开心'
-        },
-            {
-            id:'0003',
-            imgUrl:'https://imgs.qunarzz.com/sight/p0/1505/bf/bf0ddc1cc474e026.water.jpg_250x250_d208ab43.jpg',
-            title:'大连铭湖滑雪场',
-            desc:'很好，一家人都去了，玩的很开心'
-        },
-        ]
-       }
+    props: {
+      List:Array
     }
 
 }
